@@ -1,15 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-    
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!--
 
-    <script src="script.js"></script>
-</body>
+        -Header at top of the page indicating it is a virtual keyboard
+        -Next section is going to be a text box which will display whatever the user enters on the virtual keyboard
+        -Bottom section is the keyboard itself
+            -Top row is numbers and the 'X' which will remove the last character
+            -Next row is letters q - p
+            -Next row is upperCase/lowerCase (toggle), letters a - l and the Enter key
+            -Next row is a checkMark, letters z - m, comma, period, and question mark
+            -Bottom row is a spaceBar
+
+    -->
+
+		<h1>Virtual Keyboard</h1>
+
+		<section class="text_box">
+			<textarea></textarea>
+		</section>
+
+		<section class="keyboard" id="keyboard">
+			<div class="first_row row">
+				<div class="basic_key" id="one">1</div>
+				<div class="basic_key" id="two">2</div>
+				<div class="basic_key" id="three">3</div>
+				<div class="basic_key" id="four">4</div>
+				<div class="basic_key" id="five">5</div>
+				<div class="basic_key" id="six">6</div>
+				<div class="basic_key" id="seven">7</div>
+				<div class="basic_key" id="eight">8</div>
+				<div class="basic_key" id="nine">9</div>
+				<div class="basic_key" id="zero">0</div>
+				<div class="expanded_key" id="delete">
+					<div class="inner_key"><i class="far fa-times-circle"></i></div>
+				</div>
+			</div>
+			<div class="second_row row">
+				<div class="basic_key" id="q">q</div>
+				<div class="basic_key" id="w">w</div>
+				<div class="basic_key" id="e">e</div>
+				<div class="basic_key" id="r">r</div>
+				<div class="basic_key" id="t">t</div>
+				<div class="basic_key" id="y">y</div>
+				<div class="basic_key" id="u">u</div>
+				<div class="basic_key" id="i">i</div>
+				<div class="basic_key" id="o">o</div>
+				<div class="basic_key" id="p">p</div>
+			</div>
+			<div class="third_row row">
+				<div class="expanded_key" id="caps">
+					<div class="inner_key"><i class="far fa-arrow-alt-circle-up"></i></div>
+				</div>
+				<div class="basic_key" id="a">a</div>
+				<div class="basic_key" id="s">s</div>
+				<div class="basic_key" id="d">d</div>
+				<div class="basic_key" id="f">f</div>
+				<div class="basic_key" id="g">g</div>
+				<div class="basic_key" id="h">h</div>
+				<div class="basic_key" id="j">j</div>
+				<div class="basic_key" id="k">k</div>
+				<div class="basic_key" id="l">l</div>
+				<div class="expanded_key" id="return">
+					<div class="inner_key"><i class="fas fa-long-arrow-alt-left"></i></div>
+				</div>
+			</div>
+            <div class="fourth_row row">
+                <div class="expanded_key" id="complete">
+					<div class="inner_key"><i class="far fa-check-circle"></i></div>
+				</div>
+                <div class="basic_key" id="z">z</div>
+				<div class="basic_key" id="x">x</div>
+				<div class="basic_key" id="c">c</div>
+				<div class="basic_key" id="v">v</div>
+				<div class="basic_key" id="b">b</div>
+				<div class="basic_key" id="n">n</div>
+				<div class="basic_key" id="m">m</div>
+				<div class="basic_key" id="comma">,</div>
+				<div class="basic_key" id="period">.</div>
+				<div class="basic_key" id="question">?</div>
+            </div>
+            <div class="fifth_row row">
+                <div class="super_expand">
+                    <div class="inner_key"><i class="fas fa-arrows-alt-h"></i></div>
+                </div>
+            </div>
+		</section>
+
+		<script src="script.js"></script>
+	</body>
 </html>
